@@ -14,7 +14,7 @@
 .icon-more{     
     width: 20px; height: 20px; right: 10px;
     background-position: -390px -270px; 
-    margin-top: 5px;
+    margin-top: 9px;
 }
 .icon-more.on{ 
     background-position: -365px -270px;
