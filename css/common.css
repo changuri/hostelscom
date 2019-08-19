@@ -788,6 +788,7 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle{}
 .curation-room .swiper-slide{overflow: hidden; position: relative;}
 .curation-room .swiper-slide img{width:100%; vertical-align: middle; transition: 0.5s; }
 .curation-room .swiper-slide:hover img{transform: scale(1.2);}
+.curation-room .swiper-slide .text-box:hover{opacity: 0;}
 .curation-room .swiper-slide .text-box{
     position: absolute; top: 0; left: 0;
     display: inline-block;
