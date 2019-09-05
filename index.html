@@ -1,0 +1,1905 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>호스텔스닷컴</title> 
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/swiper.min.css">  
+    <link rel="stylesheet" href="css/jquery.scrollbar.css">
+    <link rel="stylesheet" href="css/nouislider.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/common.css"> 
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:992px)">   
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:767px)">      
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/jquery.scrollbar.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/wNumb.js"></script>
+    <script src="js/jquery.rwdImageMaps.min.js"></script>
+    <script src="js/datepicker.js"></script>
+    <script src="js/hostels.js"></script>     
+</head>
+<body>
+    <header>        
+        <div class="center">
+            <h1><a href="#" class="icon icon-logo"><span class="blind">호스텔스닷컴</span></a></h1>
+            <!-- #네비게이션 버튼 & 팝업-->
+            <nav>
+                <ul class="nav-button">
+                    <!-- #언어/통화/사용자 변환버튼 -->
+                    <li><a href="#language" class="icon icon-language"><span class="blind">언어변화버튼</span></a></li>
+                    <li><a href="#currency" class="icon icon-currency"><span class="blind">통화변환버튼</span></a></li>
+                    <li><a href="#login" class="icon icon-user"><span class="blind">사용자버튼</span></a> </li>
+                </ul>
+                <div class="nav-pop scrollbar-inner">                    
+                    <ul id="language" class="language ">                        
+                        <li><a href="#" title="Brazil"><i class="icon icon-flag-brazil"></i><span>Brazil</span> </a></li>
+                        <li><a href="#" title="China"><i class="icon icon-flag-china"></i><span>China</span></a></li>
+                        <li><a href="#" title="Canada"><i class="icon icon-flag-canada"></i><span>Canada</span></a></li>
+                        <li><a href="#" title="Germany"><i class="icon icon-flag-germany"></i><span>Germany</span></a></li>
+                        <li><a href="#" title="Ireland"><i class="icon icon-flag-ireland"></i><span>Ireland</span></a></li>
+                        <li><a href="#" title="Japan"><i class="icon icon-flag-japan"></i><span>Japan</span></a></li>
+                        <li><a href="#" title="France"><i class="icon icon-flag-france"></i><span>France</span></a></li>
+                        <li><a href="#" title="Singapore"><i class="icon icon-flag-singapore"></i><span>Singapore</span></a></li>
+                        <li><a href="#" title="South-korea"><i class="icon icon-flag-south-korea"></i><span>South-korea</span></a></li>
+                        <li><a href="#" title="Spain"><i class="icon icon-flag-spaine"></i><span>Spain</span></a></li>
+                        <li><a href="#" title="United-kingdom"><i class="icon icon-flag-united-kingdom"></i><span>United-kingdom</span></a></li>
+                        <li><a href="#" title="United-states-of-america"><i class="icon icon-flag-united-states-of-america"></i><span>United-states-of-america</span></a></li>
+                        <li><a href="#" title="Vietnam"><i class="icon icon-flag-vietnam"></i><span>Vietnam</span></a></li>
+                        <li><a href="#" title="Australia"><i class="icon icon-flag-australia"></i><span>Australia</span></a></li>
+                    </ul>                  
+                    <ul id="currency" class="currency">                    
+                        <li><a href="#" title="오스트레일리아 달러"><span>AUD</span> <span>오스트레일리아 달러</span></a></li>
+                        <li><a href="#" title="유로"><span>EUR</span> <span>유로</span></a></li>
+                        <li><a href="#" title="일본 엔"><span>JPY</span> <span>일본 엔</span></a></li>
+                        <li><a href="#" title="캐나다 달러"><span>CAD</span> <span>캐나다 달러</span></a></li>
+                        <li><a href="#" title="스위스 프랑"><span>CHF</span> <span>스위스 프랑</span></a></li>
+                        <li><a href="#" title="홍콩 달러"><span>HKD</span> <span>홍콩 달러</span> </span></a></li>
+                        <li><a href="#" title="인도네시아 루피아"><span>IDR</span> <span>인도네시아 루피아</span></a></li>
+                        <li><a href="#" title="대한민국 원"><span>KRW</span> <span>대한민국 원</span></a></li>
+                        <li><a href="#" title="멕시코 페소"><span>MXN</span> <span>멕시코 페소</span></a></li>
+                        <li><a href="#" title="체코 코루나"><span>CZK</span> <span>체코 코루나</span></a></li>
+                        <li><a href="#" title="뉴질랜드 달러"><span>NZD</span> <span>뉴질랜드 달러</span></a></li>
+                        <li><a href="#" title="싱가포르 달러"><span>SGD</span> <span>싱가포르 달러</span></a></li>
+                        <li><a href="#" title="태국 밧"><span>THB</span> <span>태국 밧</span></a></li>
+                        <li><a href="#" title="미국 달러"><span>USD</span> <span>미국 달러</span></a></li>                    
+                    </ul>                
+                    <div class="user">                                                      
+                        <!-- #로그인 -->
+                        <div id="login" class="login">
+                            <div class="login-sns">
+                                <a href="#" class="icon icon-Lgoogle"><span class="blind">구글</span></a>
+                                <a href="#" class="icon icon-Ltwitter"><span class="blind">트위터</span></a>
+                                <a href="#" class="icon icon-Lfacebook"><span class="blind">페이스북</span></a>
+                            </div>  
+                            <p>SNS로 로그인 또는</p>
+                            <form action="#" class="login-form">                                     
+                                <div class="text-field">
+                                    <label for="id" class="icon icon-id"></label>
+                                    <input type="text" id="id">  
+                                </div>  
+                                <div class="text-field">
+                                    <label for="password" class="icon icon-password"></label>
+                                    <input type="password" id="password">
+                                </div>                                    
+                                <button class="btn-submit"><a href="#user-menu">로그인</a></button>                           
+                            </form>  
+                            <div class="login-etc">
+                                <a href="#">회원가입</a>
+                                <a href="#">아이디/비밀번호 찾기</a>
+                            </div>
+                        </div>                        
+                        <!-- #사용자 메뉴 -->
+                        <ul id="user-menu" class="user-menu">
+                            <li><a href="#"><i class="icon icon-booking"></i><span>내 예약</span></a></li>
+                            <li><a href="#"><i class="icon icon-like"></i><span>최근 본 숙소</span></a></li>
+                            <li><a href="#"><i class="icon icon-review"></i><span>내 이용 후기</span></a></li>
+                            <li><a href="#"><i class="icon icon-pay"></i><span>결제 정보</span></a></li>
+                            <li><a href="#"><i class="icon icon-inquiry"></i><span>1:1 문의</span></a></li>
+                            <li><a href="#"><i class="icon icon-help"></i><span>도움말</span></a></li>
+                            <li><a href="#"><i class="icon icon-hostmenu"></i><span>호스트 메뉴</span></a></li>
+                            <li><a href="#"><i class="icon icon-setup"></i><span>설정</span></a></li>
+                            <li><a href="#"><i class="icon icon-logout"></i><span>로그아웃</span></a></li>
+                        </ul>                                                
+                    </div>                    
+                </div>     
+            </nav>
+            <!-- /#네비게이션 버튼 -->
+        </div>
+    </header>
+    
+
+    <section>
+        <!-- #검색창 -->
+        <article class="main-search">            
+            <div class="center">
+                <form class="search" action="#">
+                    <h2>전세계 모든 호스텔을 검색하세요.</h2>
+                    <div class="row1">                            
+                        <div class="col-1">
+                            <label for="place" class="place">여행지</label>
+                            <input type="text" name="place" id="place" placeholder="어디로 떠날까요?">                            
+                        </div> 
+                        <div class="col-2">
+                            <button type="button" class="icon icon-location"><span class="blind">위치확인</span></button>
+                        </div>
+                    </div>
+                    <div class="row2">
+                        <div class="col-1">
+                            <div class="left">
+                                <label for="from">체크인</label>
+                                <input type="text" name="check-in" id="from" placeholder=년/월/일>
+                            </div>
+                            <div class="right">
+                                <label for="to">체크아웃</label>                      
+                                <input type="text" name="check-out" id="to" placeholder=년/월/일>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <button type="button" class="icon icon-calender"><span class="blind">캘린더</span></button>
+                        </div>
+                    </div>
+                    <div class="row3">
+                        <div class="col-1">
+                            <label for="option3">인원</label>
+                            <input type="text" id="option3" value="객실0,성인0,아동0,유아0">
+                            <a href="#"><i class="icon icon-dropdown"><span class="blind">인원설정</span></i></a>
+                        </div> 
+                        <div class="col-2">
+                            <button class="icon icon-search"><span class="blind">검색</span></button>
+                        </div> 
+                    </div>   
+                    <div class="row4">                        
+                        <label><input type="checkbox"><i class="icon icon-checkbox"></i> 추가옵션검색</label>
+                    </div>
+                </form>
+                <!--검색창 팝업  -->                    
+                <div class="popup"> 
+                    <div class="popup-bg"></div>   
+                    <div class="row2-option popup-option">                                                     
+                    </div>
+                    <ul class="row3-option popup-option" id=row3-option>
+                        <span class="line"></span>                                
+                        <li>
+                            <i class="icon icon-room"></i>
+                            <span>객실</span>
+                            <div class="count-control"> 
+                                <button class="icon icon-minus"><span class="blind">빼기</span></button>
+                                <span>0</span>
+                                <button class="icon icon-plus"><span class="blind">더하기</span></button>  
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon icon-adult"></i>
+                            <span>성인</span>
+                            <div class="count-control"> 
+                                <button class="icon icon-minus"><span class="blind">빼기</span></button>
+                                <span>0</span>
+                                <button class="icon icon-plus"><span class="blind">더하기</span></button>  
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon icon-child"></i>
+                            <span>아동</span>
+                            <div class="count-control"> 
+                                <button class="icon icon-minus"><span class="blind">빼기</span></button>
+                                <span class="number">0</span>
+                                <button class="icon icon-plus"><span class="blind">더하기</span></button>  
+                            </div>
+                        </li>
+                        <li>
+                            <i class="icon icon-baby"></i>
+                            <span>유아</span> 
+                            <div class="count-control"> 
+                                <button class="icon icon-minus"><span class="blind">빼기</span></button>
+                                <span class="number">0</span>
+                                <button class="icon icon-plus"><span class="blind">더하기</span></button>  
+                            </div>
+                        </li>
+                    </ul>                                                            
+                    <div class="row4-option popup-option">
+                        <span class="line"></span>
+                        <div class="row add">
+                            <span>숙박료</span>
+                            <!-- slider 플러그인 적용 -->
+                            <div class="slider">
+                                <div class="price">        
+                                    <div id="slider"> </div>
+                                        <!-- <div class="amount">
+                                            <span class="min">￦<b id="min">0</b></span>
+                                            <span class="max">￦<b id="max">200000</b>~</span>
+                                        </div> -->
+                                    <!-- <span class="icon icon-price-start"></span>
+                                    <span class="icon icon-price-end"></span> -->                                                                             
+                                </div>                                        
+                            </div>                                               
+                        </div>
+                        <div class="row add">
+                            <span>포함사항</span>
+                            <div class="cb">
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>조식</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>주차시설</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>전망좋은숙소</label>
+                            </div>
+                            <div class="cb">
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>스파</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>개인 풀</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>슈퍼 호스트</label>
+                            </div>
+                        </div>
+                        <div class="row add">
+                            <span>숙소유형</span>
+                            <div class="cb">
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>호텔</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>도미토리</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>게스트하우스</label>
+                            </div>
+                            <div class="cb">
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>독채</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>호스텔</label>
+                                <label><input type="checkbox"><i class="icon icon-checkbox"></i>특별한 숙소</label>
+                            </div>
+                        </div>
+                    </div>                       
+                </div>                                          
+            </div>             
+        </article>
+         <!-- /#검색창 -->
+
+         <!-- #핫딜 컨텐츠-->
+        <article class="hot-deal">
+            <div class="center">
+                <h2>오늘의 핫딜</h2>
+                <!-- swiper 플러그인 사용 --> 
+                <div class="hotdeal-contents">             
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">                      
+                                <div class="text-box col-sm-5">
+                                    <strong>동해바다가 보이는 게스트하우스 핫딜!</strong>
+                                    <p>지금까지 이런 숙소는 없었다. <br> 숙소인가, 갤러리인가,<br>
+                                    넓은 창으로 보여지는 움직이는<br> 그림을 감상 할수 있는 동해바다 게스트 하우스<br>단 36시간 핫딜!</p>
+                                    <div class="countdown">
+                                        <span>남은시간</span> 
+                                        <strong class="countTime1">0일 0시간 0분 0초</strong>
+                                        <button type="button" class="time1">확인하러가기</button>
+                                    </div>                                                            
+                                </div>
+                                <div class="video-box col-sm-7">
+                                    <iframe width="100%" height="350px" controls autoplay muted src="https://www.youtube.com/embed/QAz3o676ReI" title="동해바다가 보이는 게스트하우스 핫딜" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <button type="button" class="time1">확인하러가기</button>
+                                </div>
+                            </div>
+                    
+                            <div class="swiper-slide">                      
+                                <div class="text-box col-sm-5">
+                                    <strong>전주 한옥마을 게스트하우스 핫딜!</strong>
+                                    <p>시간여행을 떠나는 전주 한옥마을. <br> 
+                                    호스텔 닷컴과 함께하면 더 즐거운 이유<br>
+                                    단 36시간 핫딜로 예매시<br>
+                                    추첨을 통해 한복 무료 대여권을 드립니다.</p>
+                                    <div class="countdown">
+                                        <span>남은시간</span>  
+                                        <strong class="countTime2">0일 0시간 0분 0초</strong>
+                                        <button type="button" class="time2">확인하러가기</button>
+                                    </div>  
+                                </div>             
+                                <div class="video-box col-sm-7">
+                                    <iframe width="100%" height="350px" src="https://www.youtube.com/embed/YT5V5eK4HF4" title="전주 한옥마을 게스트하우스 핫딜!" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <button type="button" class="time2">확인하러가기</button>
+                                </div>                      
+                            </div>
+                            
+                            <div class="swiper-slide">                
+                                <div class="text-box col-sm-5">
+                                    <strong>제주도 미도 호스텔 핫딜!</strong>
+                                    <p> 호스텔 닷컴의 최고의 평점 호스텔 <br>                                     
+                                    호스텔 닷컴과 함께 할인 이벤트를 진행합니다.<br>
+                                    단 48시간의 핫딜!<br> 혼자와도 둘이와도 여럿이와도 <br>
+                                    즐거운 제주도 미도 호스텔로 초대합니다!</p>
+                                    <div class="countdown">
+                                        <span>남은시간</span> 
+                                        <strong class="countTime3">0일 0시간 0분 0초</strong>
+                                        <button type="button" class="time3">확인하러가기</button>
+                                    </div>
+                                </div>                                
+                                <div class="video-box col-sm-7">
+                                    <iframe width="100%" height= "350px" src="https://www.youtube.com/embed/azkqJHXxinU" title="제주도 미도 호스텔 핫딜!" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <button type="button" class="time3">확인하러가기</button>
+                                </div>                                               
+                            </div>          
+                        </div>   
+                    </div> 
+                    <div class="swiper-pagination"></div>           
+                    
+                    <form class="send">
+                        <!-- 체크박스를 활용한 스위치 모양으로 마크업 -->
+                        <div class="switch">
+                            <input type="checkbox" id="on-off" title="on-off">
+                            <label for='on-off' class="on-off">                            
+                                <span class="icon icon-email"></span>
+                                <span class="icon icon-phone"></span>
+                                <span class="btn-bg icon icon-switch"></span>
+                            </label>
+                        </div>
+                        <div class="text-field deal-email">
+                            <div class="input"> <input type="text" id="email" title="email" placeholder="이메일로 핫딜정보를 받아볼래요."></div>
+                            <button type="button"><i class="icon icon-send"></i>보내기</button>                            
+                        </div>
+                        <div class="text-field deal-phone">
+                            <div class="input"> <input type="text" id="phone" title="phone" placeholder="휴대전화로 핫딜정보를 받아볼래요."></div>
+                            <button type="button"><i class="icon icon-send"></i>보내기</button>
+                        </div>                                          
+                    </form>
+                </div>                    
+        
+                <div class="pop-deal">
+                    <div class="pop-email1">
+                        <p class="email">'chaehyun282@naver.com'</p>
+                        <span class="line"></span>
+                        <p>위의 이메일로 <br> 핫딜 정보를 받아보시겠습니까?</p>                        
+                        <button type="button" class="hd-pop">취소</button>
+                        <button type="button">확인</button>                        
+                    </div>
+                    <div class="pop-email2">                        
+                        <p>이메일 주소가 등록되었습니다. <br>호스텔 닷컴과 유익한 여행되세요.</p>                        
+                        <button type="button" class="hd-pop" >확인</button>
+                    </div>
+                    <div class="pop-phone1">
+                        <p class="phone">'010-2222-9999'</p>
+                        <span class="line"></span>
+                        <p>위의 휴대폰 번호로 <br> 핫딜 정보를 받아보시겠습니까?</p>                        
+                        <button type="button" class="hd-pop">취소</button>
+                        <button type="button" >확인</button>                        
+                    </div>
+                    <div class="pop-phone2">                        
+                        <p>휴대폰 번호가 등록되었습니다. <br>호스텔 닷컴과 유익한 여행되세요.</p>                        
+                        <button type="button" class="hd-pop">확인</button>
+                    </div>
+                </div>
+            </div>
+        <div class="pop-deal-bg"></div>
+        </article>        
+         <!-- /#핫딜 컨텐츠-->
+ 
+         <!-- #실시간 인기 숙소 & 최고평점 숙소 -->
+        <article class="room">
+            <div class="center">
+                <h2 class="blind">실시간 인기 숙소 & 최고평점 숙소</h2>
+                <!-- #실시간 인기숙소 탭 -->
+                <div class="tab">
+                    <ul class="tab-nav">
+                        <li class="active">
+                            <a href="#tab-content1-1" >실시간 인기숙소</a>
+                            <button class="icon icon-more on"><span class="blind">더보기</span></button>
+                        </li>
+                        <li>
+                            <a href="#tab-content1-2" >최고의 평점 숙소</a>
+                            <button class="icon icon-more"><span class="blind">더보기</span></button>
+                        </li>                        
+                    </ul>                    
+                    <div class="tab-contents">
+                        <div class="tab-content1-1" id="tab-content1-1">
+                            <!-- swiper 영역 -->
+                            <div class="swiper-container">
+                                <!-- 틀내용 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room1-1.jpg" alt="room1"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room1-2.jpg" alt="room1"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room1-3.jpg" alt="room1"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room1-4.jpg" alt="room1"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>                               
+                                            <div class="text-box">
+                                                <a href="#">로마 아파트</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>로마</span>
+                                                    <ul>
+                                                        <li>#아파트</li>
+                                                        <li>#테라스</li>
+                                                        <li>#청결</li>
+                                                        <li>#도시</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦230,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>126</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>351</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                                <div class="inner-swiper1">
+                                                    <div class="swiper-container">
+                                                        <div class="swiper-wrapper">                                              
+                                                            <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room2-1.jpg" alt="room2"></div>
+                                                            <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room2-2.jpg" alt="room2"></div>
+                                                            <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room2-3.jpg" alt="room2"></div>
+                                                            <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room2-4.jpg" alt="room2"></div>                                                
+                                                        </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>                 
+                                            <div class="text-box">
+                                                <a href="#">Natare 게스트하우스</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>남아공</span>
+                                                    <ul>
+                                                        <li>#자연</li>
+                                                        <li>#힐링</li>
+                                                        <li>#아프리카</li>
+                                                        <li>#경치</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦180,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>208</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>384</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room3-1.jpg" alt="room3"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room3-2.jpg" alt="room3"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room3-3.jpg" alt="room3"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room3-4.jpg" alt="room3"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>                  
+                                            <div class="text-box">
+                                                <a href="#">See U Again 호스텔</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>로스엔젤레스</span>
+                                                    <ul>
+                                                        <li>#야외풀</li>
+                                                        <li>#뷰</li>
+                                                        <li>#독채</li>
+                                                        <li>#넓은거실</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="blind">평점 5점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦240,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>268</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>194</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room4-1.jpg" alt="room4"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room4-2.jpg" alt="room4"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room4-3.jpg" alt="room4"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room4-4.jpg" alt="room4"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>                
+                                            <div class="text-box">
+                                                <a href="#">파리의 아침 아파트</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>파리</span>
+                                                    <ul>
+                                                        <li>#테라스</li>
+                                                        <li>#청결</li>
+                                                        <li>#도시</li>
+                                                        <li>#아파트</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦160,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>96</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>301</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                         </div>   
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room5-1.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room5-2.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room5-3.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room5-4.jpg" alt="room5"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>                   
+                                            <div class="text-box">
+                                                <a href="#">Dream House 호스텔</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>피렌체</span>
+                                                    <ul>
+                                                        <li>#자연</li>
+                                                        <li>#야외욕조</li>
+                                                        <li>#힐링</li>
+                                                        <li>#뷰</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦200,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>188</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>104</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">                  
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room6-1.jpg" alt="room6"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room6-2.jpg" alt="room6"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room6-3.jpg" alt="room6"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room6-4.jpg" alt="room6"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div> 
+                                                <button class="icon icon-heart"></button> 
+                                            </div>              
+                                            <div class="text-box">
+                                                <a href="#">골든 타워 아파트</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>뉴욕</span>
+                                                    <ul>
+                                                        <li>#넓은창</li>
+                                                        <li>#아름다운뷰</li>
+                                                        <li>#힐링</li>
+                                                        <li>#뷰</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 "></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 3점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦210,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>200</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>191</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room7-1.jpg" alt="room7"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room7-2.jpg" alt="room7"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room7-3.jpg" alt="room7"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room7-4.jpg" alt="room7"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>                 
+                                            <div class="text-box">
+                                                <a href="#">골든 타워 아파트</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>두브로브니크</span>
+                                                    <ul>
+                                                        <li>#테라스</li>
+                                                        <li>#복층</li>
+                                                        <li>#커플</li>
+                                                        <li>#아가자기</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦175,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>86</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>267</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">    
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room8-1.jpg" alt="room8"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room8-2.jpg" alt="room8"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room8-3.jpg" alt="room8"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room8-4.jpg" alt="room8"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>                 
+                                            <div class="text-box">
+                                                <a href="#">The One 펜션</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>청두</span>
+                                                    <ul>
+                                                        <li>#아파트</li>
+                                                        <li>#예쁜인테리어</li>
+                                                        <li>#커플</li>
+                                                        <li>#청결</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 "></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 3점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦125,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>125</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>219</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper1">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room9-1.jpg" alt="room9"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room9-2.jpg" alt="room9"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room9-3.jpg" alt="room9"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/rt_b_room/m_rt_b_room9-4.jpg" alt="room9"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>                
+                                            <div class="text-box">
+                                                <a href="#">Goodge Street · Modern suite above Fitzrovia</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>런던</span>
+                                                    <ul>
+                                                        <li>#디자이너 아파트</li>
+                                                        <li>#모던</li>
+                                                        <li>#채광</li>                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="blind">평점 5점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦125,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>125</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>219</span>
+                                                    </div>
+                                                </div>
+                                            </div>                                
+                                        </div> 
+                                    </div>                                                                     
+                                </div>                               
+
+                            </div>
+                            <div class="swiper-pagination"></div>                             
+                        </div>                
+                        <!-- /#실시간인기숙소 탭 -->
+
+                        <!-- 최고의 평점숙소 -->
+                        <div class="tab-content1-2" id="tab-content1-2" >
+                                <!-- swiper 영역 -->
+                            <div class="swiper-container">
+                                <!-- 틀내용 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="wrap">                            
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room1-1.jpg" alt="room1"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room1-2.jpg" alt="room1"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room1-3.jpg" alt="room1"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room1-4.jpg" alt="room1"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>                                                    
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>                 
+                                            <div class="text-box">
+                                                <a href="#">The Best 호스텔</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>멜버른</span>
+                                                    <ul>
+                                                        <li>#로맨틱</li>
+                                                        <li>#욕실이예술</li>
+                                                        <li>#커플</li>
+                                                        <li>#청결</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="blind">평점 5점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦125,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>67</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>245</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">  
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room2-1.jpg" alt="room2"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room2-2.jpg" alt="room2"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room2-3.jpg" alt="room2"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room2-4.jpg" alt="room2"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>  
+                                            <div class="text-box">
+                                                <a href="#">하늘 위에 집</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>부다페스트</span>
+                                                    <ul>
+                                                        <li>#로맨틱</li>
+                                                        <li>#예쁜뷰</li>
+                                                        <li>#힐링</li>
+                                                        <li>#절경</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦225,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>122</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>215</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wrap"> 
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room3-1.jpg" alt="room3"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room3-2.jpg" alt="room3"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room3-3.jpg" alt="room3"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room3-4.jpg" alt="room3"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>    
+                                            <div class="text-box">
+                                                <a href="#">STUDIO 52. PRÉDIO FAMOSO CENTRO SP</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>푸동</span>
+                                                    <ul>
+                                                        <li>#자연</li>
+                                                        <li>#예쁜뷰</li>
+                                                        <li>#힐링</li>
+                                                        <li>#절경</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 3점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦170,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>245</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>125</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room4-1.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room4-2.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room4-3.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room4-4.jpg" alt="room5"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>  
+                                            <div class="text-box">
+                                                <a href="#">올드 하우스</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>몬트리올</span>
+                                                    <ul>
+                                                        <li>#복층</li>
+                                                        <li>#커플</li>
+                                                        <li>#아파트</li>
+                                                        <li>#청결</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="blind">평점 5점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦180,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>67</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>239</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide"> 
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room5-1.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room5-2.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room5-3.jpg" alt="room5"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room5-4.jpg" alt="room5"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>     
+                                            <div class="text-box">
+                                                <a href="#">stylish townhouse</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>케이프타운</span>
+                                                    <ul>
+                                                        <li>#디자인하우스</li>
+                                                        <li>#청결</li>
+                                                        <li>#깔끔</li>
+                                                        <li>#아기자기</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦120,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>52</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>69</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide"> 
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room6-2.jpg" alt="room6"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room6-3.jpg" alt="room6"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room6-4.jpg" alt="room6"></div>                                                
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room6-1.jpg" alt="room6"></div>
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart full"></button>
+                                            </div>  
+                                            <div class="text-box">
+                                                <a href="#">Loft en el corazón de Sevilla</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>세비아</span>
+                                                    <ul>
+                                                        <li>#유럽스타일</li>
+                                                        <li>#고풍</li>
+                                                        <li>#조용</li>
+                                                        <li>#시티외곽</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦140,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>67</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>156</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide"> 
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room7-1.jpg" alt="room7"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room7-2.jpg" alt="room7"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room7-3.jpg" alt="room7"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room7-4.jpg" alt="room7"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>  
+                                            <div class="text-box">
+                                                <a href="#">colorful curated 아파트</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>프라랴 델 카르멘</span>
+                                                    <ul>
+                                                        <li>#예쁜디자인</li>
+                                                        <li>#시티중심</li>
+                                                        <li>#아지자기</li>                                                        
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦170,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>256</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>157</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide"> 
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room8-1.jpg" alt="room8"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room8-2.jpg" alt="room8"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room8-3.jpg" alt="room8"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room8-4.jpg" alt="room8"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>   
+                                            <div class="text-box">
+                                                <a href="#">게스트 스튜디오</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>샌안토니오</span>
+                                                    <ul>
+                                                        <li>#청결</li>
+                                                        <li>#복층</li>
+                                                        <li>#아늑함</li>
+                                                        <li>#베스트위치</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦120,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>39</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>96</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide"> 
+                                        <div class="wrap">
+                                            <div class="inner-swiper2">
+                                                <div class="swiper-container">
+                                                    <div class="swiper-wrapper">
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room9-1.jpg" alt="room9"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room9-2.jpg" alt="room9"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room9-3.jpg" alt="room9"></div>
+                                                        <div class="swiper-slide"><img src="imgTabin/b_room/m_b_room9-4.jpg" alt="room9"></div>                                                
+                                                    </div>
+                                                    <div class="swiper-button-next"><i class="icon icon-snext"></i></div>
+                                                    <div class="swiper-button-prev"><i class="icon icon-sprev"></i></div>
+                                                </div>
+                                                <button class="icon icon-heart"></button>
+                                            </div>   
+                                            <div class="text-box">
+                                                <a href="#">릴렉스 하우스</a>
+                                                <div class="hash">
+                                                    <i class="icon icon-map"></i><span>청두</span>
+                                                    <ul>
+                                                        <li>#좋은위치</li>
+                                                        <li>#청결</li>
+                                                        <li>#넓은주방</li>
+                                                        <li>#남향</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="like">
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="icon icon-star1 on"></span>
+                                                    <span class="blind">평점 5점</span>
+                                                </div>
+                                                <div class="bottom-area">
+                                                    <strong>￦190,000</strong>
+                                                    <div class="info">
+                                                        <span><i class="icon icon-review"></i><span class="blind">댓글</span>78</span>
+                                                        <span><i class="icon icon-like"></i><span class="blind">좋아요</span>170</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </div>                                
+                            </div>
+                            <div class="swiper-pagination"></div> 
+                           
+                        </div>                        
+                    </div>
+                </div>
+            </div>    
+        </article>
+        <!-- /#실시간 인기 숙소 & 최고평점 숙소 -->
+
+        <!-- #실시간 게스트 이용 후기 & 이용 후기 많은 숙소 -->
+        <article class="geust">
+            <div class="center">
+                <h2 class="blind">실시간 게스트 이용 후기</h2>
+                <!-- #실시간 게스트 이용 후기 탭 -->
+                <div class="tab">
+                    <ul class="tab-nav">
+                        <li class="active">
+                            <a href="#tab-content2-1" >실시간 게스트 리뷰</a>
+                            <button class="icon icon-more on"><span class="blind">더보기</span></button>
+                        </li>
+                        <li>
+                            <a href="#tab-content2-2" >리뷰 많은 숙소</a>
+                            <button class="icon icon-more"><span class="blind">더보기</span></button>
+                        </li>                        
+                    </ul>                   
+                    <!-- #실시간 게스트 이용후기 -->
+                    <div class="tab-contents">
+                        <div class="tab-content2-1" id="tab-content2-1" class="active" style="display: block;">
+                            <!-- swiper 영역 -->
+                            <div class="swiper-container">
+                                <!-- 틀내용 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">                                       
+                                        <img src="img/g_room/m_rt_g_room1.jpg" alt="쉰라호텔">                               
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>쉰라호텔</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#조식</li>
+                                                <li>#호탕스</li>
+                                                <li>#조식부폐</li>                                        
+                                            </ul>
+                                            <p>여직원들끼리 호캉스로 하루 묵고 갑니다. 별기대 안하고 왔는데 정말 힐링하고 가요~ 뷰도 너무 좋고 조용하고, 
+                                                서비스도 만점! 깨끗하고 깔끔해요! 특별히 조식정말 끝내 줍니다. 아침 든든히 먹고 출근했답니다^^</p>                                                          
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="swiper-slide">                                         
+                                        <img src="img/g_room/m_rt_g_room2.jpg" alt="모던 호스텔">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                        <strong>모던 호스텔</strong>
+                                        <div class="like">
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star"></span>
+                                            <span class="blind">평점 4점</span>
+                                        </div>
+                                        <ul>
+                                            <li>#친절한직원</li>
+                                            <li>#가성비</li>
+                                            <li>#청결</li>                                        
+                                        </ul>
+                                        <p>친구와 우정여행으로 예약했습니다. 숙박료가 저렴하고 청결합니다. 가성비 갑갑! 조금 늦게 도착해서 직원분들 성가셨을텐데 정말 친절하게 설명해 주셨어요. 
+                                            피곤해서 방에 들어가서 쉬어야지 했는데 왠걸 창문으로 보이는 뷰로인해 피곤이 싹 녹았답니다.추천해요!!</p>                                                                                       
+                                    
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="swiper-slide">                                        
+                                        <img src="img/g_room/m_rt_g_room3.jpg" alt="게스트 인 더 해븐">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                        <strong>게스트 인 더 해븐</strong>
+                                        <div class="like">
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star on"></span>
+                                            <span class="icon icon-star"></span>
+                                            <span class="icon icon-star"></span>
+                                            <span class="blind">평점 3점</span>
+                                        </div>
+                                        <ul>
+                                            <li>#욕실맛집</li>
+                                            <li>#반신욕</li>
+                                            <li>#힐링</li>                                        
+                                        </ul>
+                                        <p>고된 여행으로 몹시 피곤했는데 숙소에 도착해서 깜짝 놀랐네요. 엄청 깨끗하고 인테리어도 넘나 좋은그~~ 
+                                            피곤해서 방에 들어가서 쉬어야지 했는데 왠걸 여기 화장실 맛집이네요. 반신욕으로 모든 피로가싹~! 완전 강추해요!!</p>                                                                                       
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="warp">
+                                            <img src="img/g_room/m_rt_g_room4.jpg" alt="세인트존슨 게스트하우스">                                    
+                                            <div class="text-box draggable ui-widget-content">
+                                                <strong>세인트존슨 게스트하우스</strong>
+                                                <div class="like">
+                                                    <span class="icon icon-star on"></span>
+                                                    <span class="icon icon-star on"></span>
+                                                    <span class="icon icon-star on"></span>
+                                                    <span class="icon icon-star on"></span>
+                                                    <span class="icon icon-star"></span>
+                                                    <span class="blind">평점 4점</span>
+                                                </div>
+                                                <ul>
+                                                    <li>#침실강추</li>
+                                                    <li>#윈도우뷰</li>
+                                                    <li>#분위기</li>                                        
+                                                </ul>
+                                                <p>남자친구와 여행으로 예약했습니다. 호스텔 닷컴에 올라온 사진처럼 완전 분위기 깡패네요! 사진보다 훠얼씬 좋구요.
+                                                    창으로 보이는 풍경이 정말 절경이네요. 다음에 또오고 싶을정도로 정말 좋은 숙소 입니다. 
+                                                </p>                                                                                       
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">                                       
+                                        <img src="img/g_room/m_rt_g_room5.jpg" alt="베니키아 프리미어 호텔">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>베니키아 프리미어 호텔</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#럭셔리</li>
+                                                <li>#깔끔숙소</li>
+                                                <li>#좋은위치</li>                                        
+                                            </ul>
+                                            <p>도심에 위치해서 어딜가든 좋은 위치의 호텔이예요. 대중교통이용하기 굉장히 좋고 근처에 구경할것도 많고 좋아요. 
+                                                룸도 일반 룸인데도 넉넉하고 편해요. 안락하고 조명도 좋고 강추강추합니다.</p>                                                                                       
+                                        </div>                                    
+                                    </div>
+
+                                    <div class="swiper-slide">                                       
+                                        <img src="img/g_room/m_rt_g_room6.jpg" alt="노을 언덕 펜션">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>노을 언덕 펜션</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 3점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#조식</li>
+                                                <li>#친절</li>
+                                                <li>#깔끔</li>                                        
+                                            </ul>
+                                            <p>2분정도 걸으면 바로 앞이 바다라 정말 좋았습니다. 무엇보다도 사장님이 친절하셔서 이것저것 설명도 잘해주시고
+                                            방도 깨끗하고 따뜻하네요. 원래 남의 집에서는 잠을 잘 못자는데 여기서는 편하게 숙면하고 갑니다. </p>                                                                                       
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="swiper-slide">                                      
+                                        <img src="img/g_room/m_rt_g_room7.jpg" alt="시에스타 펜션">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>시에스타 펜션</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#유럽풍</li>
+                                                <li>#청결</li>
+                                                <li>#좋은사장님</li>                                        
+                                            </ul>
+                                            <p>가족들과 여행왔어요. 어른들 모시고 오는거라 걱정 많이 했는데, 다행스럽게도 정말 깔끔하고 넓은 펜션이네요
+                                                식기류도 다있어서 같이 요리해먹고 바베큐도 해먹을수 있어 좋네요. 커피 머신과 원두 제공되는 것이 최고로 좋네요.
+                                                아침에 일어나서 모닝커피 한잔 내려먹는 여유까지 완벽한 여행이었습니다.</p>                                                                                       
+                                        </div>                                        
+                                    </div>
+                            
+                                    <div class="swiper-slide">                                       
+                                        <img src="img/g_room/m_rt_g_room8.jpg" alt="필란드의아침 게스트하우스">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>필란드의아침 게스트하우스</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star "></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 3점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#아기자기</li>
+                                                <li>#깔끔</li>
+                                                <li>#좋은게하</li>                                        
+                                            </ul>
+                                            <p>깔끔한 도미토리 찾고 있었는데 정말 깔끔하고 잘 관리된 게스트하우스였어요. 혼자 왔는데 방 언니들이랑 친해져서 같이 여행하고
+                                            숙소에 여행정보도 많이 있어서 잘 여행하고 돌아왔습니다. 
+                                            </p>                                                                                       
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="swiper-slide">                                       
+                                        <img src="img/g_room/m_rt_g_room9.jpg" alt="아띠랑스 풀빌라">                                    
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>아띠랑스 풀빌라</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star "></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 3점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#아기자기</li>
+                                                <li>#이쁨주의</li>
+                                                <li>#전망</li>                                        
+                                            </ul>
+                                            <p>전반적으로 만족스러웠습니다. 넓고 전망이 좋았어요. 숙소 곳곳에 생화를 놓아 주셔서 기분도 상큼 하고 정말 좋았습니다.
+                                                특별히 화장실이 청소도 잘되어 있고 예쁘네요.</p>                                                                                       
+                                        </div>                                       
+                                    </div>                                       
+                                </div>                                                            
+                            </div>
+                            <div class="swiper-pagination"></div>                             
+                            
+                        </div>                 
+                        <!-- /#실시간 게스트 이용후기 -->
+
+                        <!-- #이용후기 많은 숙소 -->                    
+                        <div class="tab-content2-2" id="tab-content2-2">
+                            <!-- swiper 영역 -->
+                            <div class="swiper-container">
+                                <!-- 틀내용 -->
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="img/g_room/m_g_room1.jpg" alt="포레스트 펜션">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>포레스트 펜션</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#가족여행</li>
+                                                <li>#주방</li>
+                                                <li>#위치</li>                                        
+                                            </ul>
+                                            <p>거실 넓고 냉장고도 양문형 냉장고에 사용은 안했지만 통돌이 세탁기도 구비 되어 있어서 가족여행펜션으로는 아주 좋았어요.
+                                                친구도 넉넉하게 준비되어있고, 아기자기한 디자인이 더욱 편안하게 느껴지게 하네요. 가족여행 숙소로 강추합니다^^ </p>                                                          
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="swiper-slide"> 
+                                        <img src="img/g_room/m_g_room2.jpg" alt="니나랑 펜션">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>니나랑 펜션</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#힐링</li>
+                                                <li>#시골</li>
+                                                <li>#예쁜방</li>                                        
+                                            </ul>
+                                            <p>사장님 정말 친절하시고 사진보다 숙소가 훨씬 예쁘네요^^ 구조가 마음에 들어서 특히 차한잔 마실수 있는 테이블에 앉아 있으니 
+                                                정말 좋드라구요. 차가 없으면 오기 불편하겠지만 푹쉬고 가고 싶은 분들에게는 추천합니다. 시골분위기와 잘 어울리는 힐링 포인트를 가진 숙소예요.</p>                                                          
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="img/g_room/m_g_room3.jpg" alt="파라다이스 호스텔">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>파라다이스 호스텔</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 3점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#깔끔한방</li>
+                                                <li>#예쁜숙소</li>
+                                                <li>#주방</li>                                        
+                                            </ul>
+                                            <p>깔끔하고 세련된 디자인에 근처에 조용한 산책로가 있어서 좋아어요. 마트도 가깝고해서 친구들이랑 같이 음식도 만들어 먹었네요
+                                            예쁜인테리어로 사진 찍기도 좋고 인스타에 사진올리가 쵝오! 좋은 추억만들고 갑니다.</p>                                                          
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="swiper-slide">  
+                                        <img src="img/g_room/m_g_room4.jpg" alt="힐링 연 펜션">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>힐링 연 펜션</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#바다</li>
+                                                <li>#친절직원</li>
+                                                <li>#예쁨주의</li>                                        
+                                            </ul>
+                                            <p>바닷가가 바로 근처라 좋네요. 인테리어가 정말 이쁘고 편안한 분위기네요. 사장님과 매니저님도 너무 친절해서
+                                                쾌적한 분위기에서 제대로 힐링하고 왔어요. 숙소가 청결한것도 당연! 사진보다 훨씬 좋네요.</p>                                                          
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="img/g_room/m_g_room5.jpg" alt="아트 인타라 게스트하우스">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>아트 인타라 게스트하우스</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 3점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#관광지</li>
+                                                <li>#공동주방</li>
+                                                <li>#깔끔청결</li>                                        
+                                            </ul>
+                                            <p>밤늦게 도착했는데, 직원분이 친절히 안내해주셔서 넘나 감사했습니다. 위치가 좋아서 찾기 쉬웠고 주변 관광지하고도 가까워서 여행하기 좋았어요
+                                                공동주방이 있어 가족단위, 친구들끼리 오면 정말 좋을것같드라고요. 무난하고 적당히 머물다 가기 좋은 수소였습니다.<p>                                                          
+                                        </div>                                    
+                                    </div>
+
+                                    <div class="swiper-slide">  
+                                        <img src="img/g_room/m_g_room6.jpg" alt="골든 튤립 호텔">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>골든 튤립 호텔</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#공항근처</li>
+                                                <li>#굿위치</li>
+                                                <li>#쾌적청결</li>                                        
+                                            </ul>
+                                            <p>공항과 매우 가깝고 지하철 역옆에 마트가 있어서 위치가 참 우수합니다. 비행기 시간이 애매 할때 묵기 딱 좋은 숙소입니다.
+                                                가격대비 너무나 좋았고 마침 초청연주가 있던 날이라 로비에서 커피마시면서 기타 연주도 구경했네요. <p>                                                          
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="swiper-slide">  
+                                        <img src="img/g_room/m_g_room7.jpg" alt="라이즈 업 게스트 하우스">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>라이즈 업 게스트 하우스</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#관광지</li>
+                                                <li>#인테리어</li>
+                                                <li>#조식</li>                                        
+                                            </ul>
+                                            <p>두번째 왔는데 역시 인테리어나 시설 맘에 들어요. 올드하면서 독특한 인테리어는 역시 언제 봐도 따뜻한 추억을 불러 일으키네요.
+                                                자유롭게 늦게까지도 제공되는 조식이 이 게하의 최고 매력이지 않을까 싶네요. <p>                                                          
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="swiper-slide">  
+                                        <img src="img/g_room/m_g_room8.jpg" alt="제임스 조이스 호텔">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>제임스 조이스 호텔</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#화장실맛집</li>
+                                                <li>#청결</li>
+                                                <li>#굿위치</li>                                        
+                                            </ul>
+                                            <p>암막커튼이 있어서 창이 큼에도 불구하고 아침에 푹잤네요. 사진에서는 욕조 사진이 없어서 없을 줄 알았는데 화장실도 크고
+                                                인테리어가 정말 예쁜네요. 침구 상태도 굿이고 위치도 좋네요.<p>                                                          
+                                        </div>                                        
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <img src="img/g_room/m_g_room9.jpg" alt="다브 펜션">                              
+                                        <div class="text-box draggable ui-widget-content" >
+                                            <strong>다브 펜션</strong>
+                                            <div class="like">
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star on"></span>
+                                                <span class="icon icon-star"></span>
+                                                <span class="blind">평점 4점</span>
+                                            </div>
+                                            <ul>
+                                                <li>#커플여행</li>
+                                                <li>#힐링</li>
+                                                <li>#조용</li>                                        
+                                            </ul>
+                                            <p>깨끗하고 조용하고 공기도 맑아서 좋네요. 전체적으로 깔끔하고 예뻤어요. 여자친구랑 함게왔는데 여자친구도 대 만족이네요.
+                                                차가 있어야 오는 곳이라 불편할수도 있지만 주변이 조용하고 편하게 쉬다 갈수 있습니다.<p>                                                          
+                                        </div>                                       
+                                    </div>                                   
+
+                                </div>                                
+                            </div> 
+                            <div class="swiper-pagination"></div> 
+                            
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </article>                       
+        <!-- /#실시간 게스트 이용 후기 & 이용 후기 많은 숙소 -->
+
+        <!-- #위치확인 숙소-->
+        <article class="location">
+            <div class="text-box">
+                <p>내 주변 지금 예약 가능한<br> 숙소를 확인하세요!</p>
+                <i class="icon icon-location-big"></i>
+                <a href="#">위치확인</a>
+            </div>
+            <div class="pop-location">
+                <button class="icon icon-500m"></button>
+                <button class="icon icon-1km"></button>
+                <button class="icon icon-2km"></button>
+                <button class="icon icon-map"></button>
+                <span> 강원도 속초시 장사동</span>
+            </div>
+        </article>
+        <!-- #위치확인 숙소-->
+
+        <!-- #취향저격 숙소  -->        
+        <article class="curation-room">
+            <div class="center">
+                <h2><i class="icon icon-point"></i><span class="loginId">홍길동</span>님의 취향저격 숙소</h2>
+                <button class="icon icon-more-g"><span class="blind">더보기</span></button>
+                <!-- swiper 영역 -->
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room1.jpg" alt="시칠리아">
+                            <a href="#" class="text-box">
+                                <strong>시칠리아</strong>
+                                <ul>
+                                    <li>#풀</li>
+                                    <li>#물놀이</li>
+                                    <li>#바다</li>                    
+                                </ul>                        
+                                <p>￦50,000부터</p>
+                            </a>
+                        </div>  
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room2.jpg" alt="멕시코">
+                            <a href="#" class="text-box">
+                                <strong>멕시코</strong>
+                                <ul>
+                                    <li>#전망</li>
+                                    <li>#개인풀</li>
+                                    <li>#산</li>                    
+                                </ul>                        
+                                <p>￦70,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room3.jpg" alt="로스앤젤레스">
+                            <a href="#" class="text-box">
+                                <strong>로스앤젤레스</strong>
+                                <ul>
+                                    <li>#자연</li>
+                                    <li>#전망좋은풀</li>
+                                    <li>#리조트</li>                    
+                                </ul>                        
+                                <p>￦80,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room4.jpg" alt="케이프타운">
+                            <a href="#" class="text-box">
+                                <strong>케이프타운</strong>
+                                <ul>
+                                    <li>#풀빌라</li>
+                                    <li>#펜션</li>
+                                    <li>#자연경관</li>                    
+                                </ul>                        
+                                <p>￦60,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room5.jpg" alt="엘터디너">
+                            <a href="#" class="text-box">
+                                <strong>엘터디너</strong>
+                                <ul>
+                                    <li>#풀</li>
+                                    <li>#파티오</li>
+                                    <li>#바다</li>                    
+                                </ul>                        
+                                <p>￦50,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room6.jpg" alt="말리부">
+                            <a href="#" class="text-box">
+                                <strong>말리부</strong>
+                                <ul>
+                                    <li>#게스트하우스</li>
+                                    <li>#야외풀</li>
+                                    <li>#물놀이</li>                    
+                                </ul>                        
+                                <p>￦40,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room7.jpg" alt="오스틴">
+                            <a href="#" class="text-box">
+                                <strong>오스틴</strong>
+                                <ul>
+                                    <li>#개인풀</li>
+                                    <li>#전망</li>
+                                    <li>#파티오</li>                    
+                                </ul>                        
+                                <p>￦70,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room8.jpg" alt="로스엔젤레스">
+                            <a href="#" class="text-box">
+                                <strong>로스엔젤레스</strong>
+                                <ul>
+                                    <li>#게스트하우스</li>
+                                    <li>#야외풀</li>
+                                    <li>#파티오</li>                    
+                                </ul>                        
+                                <p>￦80,000부터</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="img/m_cu_room9.jpg" alt="라고비스타">
+                            <a href="#" class="text-box">
+                                <strong>라고비스타</strong>
+                                <ul>
+                                    <li>#리조트</li>
+                                    <li>#야외풀</li>
+                                    <li>#바다</li>                    
+                                </ul>                        
+                                <p>￦90,000부터</p>
+                            </a>
+                        </div>                        
+                    </div>                    
+                </div>
+                <div class="swiper-pagination"></div>
+                <!-- <div class="swiper-button-next"><i class="icon icon-next"></i><span class="blind">이전</span></div>
+                <div class="swiper-button-prev"><i class="icon icon-prev"></i><span class="blind">다음</span></div> -->
+            </div>
+        </article>
+        <!-- /#취향저격 숙소  -->
+
+        <!-- #테마별 숙소 -->
+        <article class="theme">
+            <div class="center">
+                <h2><i class="icon icon-point"></i> 테마별 최고의 숙소가 있는 호스텔스닷컴 추천</h2>
+                <button class="icon icon-more-g"><span class="blind">더보기</span></button>
+                <ul class="box1 col-sm-6">
+                    <li><a href="#"><img src="img/m_thema_fa.jpg" alt="가족여행"><span><p>가족<br>여행</p></span></a></li>
+                    <li><a href="#"><img src="img/m_thema_se.jpg" alt="즉흥여행"><span><p>즉흥<br>여행</p></span></a></li>
+                    <li><a href="#"><img src="img/m_thema_fr.jpg" alt="우정여행"><span><p>우정<br>여행</p></span></a></li>
+                </ul>
+                <ul class="box2 col-sm-6">
+                    <li><a href="#"><img src="img/m_thema_al.jpg" alt="혼자여행"><span><p>혼자<br>여행</p></span></a></li>
+                    <li><a href="#"><img src="img/m_thema_to.jpg" alt="단체여행"><span><p>단체<br>여행</p></span></a></li>
+                    <li><a href="#"><img src="img/m_thema_pet.jpg" alt="반려동물과여행"><span><p>반려동물과 여행</p></span></a></li>
+                    <li><a href="#"><img src="img/m_thema_he.jpg" alt="힐링여행"><span><p>힐링<br>여행</p></span></a></li>
+                    <li><a href="#"><img src="img/m_thema_bu.jpg" alt="출장"><span><p>출장</p></span></a></li>
+                </ul>
+            </div>     
+        </article>
+        <!-- /#테마별 숙소 -->
+
+        <!-- #지역별 숙소 -->
+        <article class="area">
+            <div class="center">
+                <h2 ><i class="icon icon-point"></i> 지역별 최고의 숙소</h2>
+                <button class="icon icon-more-g"><span class="blind">더보기</span></button>
+                <select name="다른 지역보기" id="area-option" >
+                    <option value="다른 지역보기" title="다른 지역보기">다른 지역보기</option>
+                    <option value="남아메리카" title="남아메리카">남아메리카</option>
+                    <option value="북아메리카" title="북아메리카">북아메리카</option>
+                    <option value="동유럽" title="동유럽">동유럽</option>
+                    <option value="서유럽" title="서유럽">서유럽</option>
+                    <option value="동아시아" title="동아시아">동아시아</option>
+                    <option value="동남아시아" title="동남아시아">동남아시아</option>
+                    <option value="남아프리카" title="남아프리카">남아프리카</option>
+                    <option value="북아프리카" title="북아프리카">북아프리카</option>                 
+                </select>                
+                <div class="map-area">               
+                    <img src="img/map.png" usemap="#image-map" alt="지역별 최고의 숙소 지도">
+
+                    <map name="image-map"> 
+                        <area class="btn-tooltip" target="" alt="제주도" data-title="301" href="#" data-position="jeju" coords="147,901,194,905,207,923,200,946,177,960,149,967,136,971,108,971,89,978,74,968,58,964,54,953,78,930" shape="poly">    
+                        <area class="btn-tooltip" target="" alt="서울" data-title="286" href="#" data-position="seoul" coords="200,184,142,222,153,244,178,246,205,255,230,245,237,229,226,207,217,191" shape="poly">                                                            
+                        <area class="btn-tooltip" target="" alt="대전" data-title="120" href="#" data-position="daejeon" coords="248,519,215,504,188,501,193,458,219,439,230,459,244,470" shape="poly">                           
+                        <area class="btn-tooltip" target="" alt="경기도" data-title="376" href="#" data-position="gyeongi" coords="234,102,250,136,275,139,285,151,274,180,278,207,303,231,310,253,308,283,284,313,254,339,226,354,185,354,152,349,125,340,127,322,110,313,107,299,140,287,117,269,108,255,82,257,79,269,89,293,72,313,15,300,16,278,67,275,74,256,72,246,107,229,101,220,70,221,71,184,84,165,119,173,131,167,131,136,177,112,183,83,196,72" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="강원도" data-title="293" href="#" data-position="kang" coords="414,5,425,0,438,22,445,69,475,107,484,135,503,161,520,200,549,260,566,275,568,310,542,329,434,327,392,309,339,307,313,310,295,305,318,285,313,242,303,219,283,203,281,171,292,157,282,134,254,128,240,101,203,68,220,64,311,63,370,66,404,52" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="충남" data-title="186" href="#" data-position="C-nam" coords="122,345,161,361,211,364,223,393,218,409,221,432,185,452,185,479,180,504,217,517,252,525,261,540,221,548,206,532,131,526,104,545,80,540,65,522,69,501,61,469,64,445,55,434,54,463,35,447,29,411,21,389,26,381,61,372,50,354,67,342,70,332,87,335,101,357" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="충북" data-title="143" href="#" data-position="C-buk" coords="291,312,255,346,220,361,231,394,227,426,235,454,250,465,255,503,264,535,306,544,306,447,300,416,330,383,361,378,398,379,408,355,431,336,396,316,340,314,315,317" shape="poly">                           
+                        <area class="btn-tooltip" target="" alt="전북" data-title="237" href="#" data-position="J-buk" coords="216,555,205,537,133,532,107,552,76,549,61,557,86,600,67,601,57,622,39,641,57,649,35,662,70,685,84,682,92,664,109,662,142,681,170,686,229,687,240,658,231,647,264,575,299,566,303,550,263,545,243,554" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="전남" data-title="269" href="#" data-position="J-nam" coords="228,693,226,719,247,746,249,793,212,803,178,829,142,832,118,859,110,882,71,882,42,912,20,907,17,882,8,845,30,843,34,828,11,825,0,811,14,794,12,763,24,748,1,722,18,702,27,672,56,688,73,695,92,686,100,670,111,670,136,689,179,697" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="광주" data-title="86" href="#" data-position="gwangu" coords="94,719,71,734,70,754,104,774,132,764,161,737,142,724" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="대구" data-title="79" href="#" data-position="daegu" coords="369,611,398,615,419,620,446,603,454,584,445,560,443,545,433,541,412,552,382,565,381,591,378,602" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="울산" data-title="52" href="#" data-position="woolsan" coords="478,633,492,634,517,623,577,623,564,650,544,693,509,675,486,667" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="부산" data-title="174" href="#" data-position="busan" coords="486,678,507,683,538,700,523,727,517,747,499,750,486,745,467,768,453,755,432,750,417,740,417,715,443,706,468,706" shape="poly">                        
+                        <area class="btn-tooltip" target="" alt="경북" data-title="181" href="#" data-position="K-buk" coords="572,317,541,339,438,336,414,360,405,389,355,384,326,396,307,420,315,449,313,526,309,567,317,584,336,593,361,609,371,590,369,566,395,552,436,530,451,544,461,586,457,604,432,622,458,624,482,627,516,615,578,616,585,571,597,554,597,542,588,540,565,554,552,539,573,474,577,430,587,406,576,377,580,349" shape="poly">                         
+                        <area class="btn-tooltip" target="" alt="경남" data-title="277" href="#" data-position="K-nam" coords="301,574,273,579,241,645,248,659,243,678,232,710,256,748,257,792,297,774,318,789,340,786,361,796,373,794,383,761,407,737,408,715,418,705,458,697,480,670,468,632,433,631,398,622,364,620,328,601,312,590" shape="poly">
+                    </map>
+                </div>
+
+            </div>
+        </article>  
+
+        <!-- /#지역별 숙소 -->             
+    </section>
+    <button class="top" id="goTop"><i class="icon icon-top"></i></button>
+
+    <footer>  
+        <div class="footerbg">    
+            <h2>FOLLOW US</h2>
+            <div class="sns">            
+                <button class="icon icon-flickr"><span class="blind">플리커</span></button>
+                <button class="icon icon-twitter"><span class="blind">트위터</span></button>
+                <button class="icon icon-facebook"><span class="blind">페이스북</span></button>
+                <button class="icon icon-pinterest"><span class="blind">핀터레스트</span></button>
+                <button class="icon icon-googleplus"><span class="blind">구글플러스</span></button>
+                <button class="icon icon-youtube"><span class="blind">유투브</span></button>
+            </div>
+            <span class="line"></span>
+            <div class="info-link">
+                <a href="#">회사소개</a>
+                <a href="#">고객센터</a>
+                <a href="#">모바일 사이트</a>
+                <a href="#">데이터 보호정책</a>
+                <a href="#">이용약관</a>
+            </div>
+        </div>  
+        <div class="copyright">&copy; Hostelworld.com Ltd 1999-2019</div>         
+    </footer>
+    
+    
+</body>
+</html>
