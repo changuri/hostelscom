@@ -235,9 +235,9 @@ $(function(){
   })       
 
   //카운트 다운 time1 
-  countDown('2019-10-11 18:00:00', '.countTime1', '.time1');
+  countDown('2019-10-19 18:00:00', '.countTime1', '.time1');
   countDown('2019-10-06 18:00:00', '.countTime2', '.time2');
-  countDown('2019-10-15 18:00:00', '.countTime3', '.time3');
+  countDown('2019-10-23 18:00:00', '.countTime3', '.time3');
   function countDown(dday, selector1, selector2){
     var time = new Date(dday).getTime();
     var x = setInterval(function() {      
